@@ -1,0 +1,14 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: zipkin
+      MYSQL_USER: zipkin_user
+      MYSQL_PASSWORD: zipkin_passw0rd
+      MYSQL_ROOT_PASSWORD: passw0rd
+    volumes:
+      - ./mysql/mysql_data:/var/lib/mysql
+      - ./mysql/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d

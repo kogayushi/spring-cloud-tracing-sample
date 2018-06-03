@@ -1,0 +1,11 @@
+server.port: 9411
+
+zipkin:
+  storage:
+    type: mysql
+    mysql:
+      host: 127.0.0.1
+      port: 3306
+      db: zipkin
+      username: zipkin_user
+      password: zipkin_passw0rd
